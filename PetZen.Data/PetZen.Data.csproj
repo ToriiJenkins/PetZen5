@@ -61,6 +61,15 @@
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Medication.cs" />
+    <Compile Include="Migrations\202101040138464_InitialCreate.cs" />
+    <Compile Include="Migrations\202101040138464_InitialCreate.Designer.cs">
+      <DependentUpon>202101040138464_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101040247033_ChangeDateToOffset3Tables.cs" />
+    <Compile Include="Migrations\202101040247033_ChangeDateToOffset3Tables.Designer.cs">
+      <DependentUpon>202101040247033_ChangeDateToOffset3Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpeciesEnum.cs" />
@@ -68,6 +77,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101040138464_InitialCreate.resx">
+      <DependentUpon>202101040138464_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101040247033_ChangeDateToOffset3Tables.resx">
+      <DependentUpon>202101040247033_ChangeDateToOffset3Tables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

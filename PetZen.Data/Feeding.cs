@@ -17,7 +17,7 @@ namespace PetZen.Data
         public Guid OwnerId { get; set; }
 
         [Required]
-        public DateTime FeedDateTime { get; set; }
+        public DateTimeOffset FeedDateTime { get; set; }
 
         [Required]
         [ForeignKey(nameof(Pet))]

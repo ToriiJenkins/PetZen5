@@ -22,7 +22,7 @@ namespace PetZen.Data
         public virtual Pet Pet { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
+        public DateTimeOffset AdminDateTime { get; set; }
 
         public string Notes { get; set; }
     }

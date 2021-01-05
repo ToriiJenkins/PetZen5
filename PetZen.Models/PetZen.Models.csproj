@@ -54,11 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityModels\ActivityListItem.cs" />
+    <Compile Include="FoodModels\FoodCreate.cs" />
+    <Compile Include="FoodModels\FoodListItem.cs" />
+    <Compile Include="MedicationModels\MedicationListItem.cs" />
+    <Compile Include="PetModels\PetCreate.cs" />
+    <Compile Include="PetModels\PetDetail.cs" />
+    <Compile Include="PetModels\PetEdit.cs" />
+    <Compile Include="PetModels\PetListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PetZen.Data\PetZen.Data.csproj">
+      <Project>{e89046c5-1ef6-4edf-9584-c3723ff35f06}</Project>
+      <Name>PetZen.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdministrationModels\" />
+    <Folder Include="FeedingModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
