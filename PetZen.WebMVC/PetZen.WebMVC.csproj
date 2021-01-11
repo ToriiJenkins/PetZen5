@@ -249,6 +249,15 @@
     <Content Include="Views\Pet\Edit.cshtml" />
     <Content Include="Views\Pet\Delete.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
+    <Content Include="Views\Food\Details.cshtml" />
+    <Content Include="Views\Food\Edit.cshtml" />
+    <Content Include="Views\Food\Delete.cshtml" />
+    <Content Include="Views\Medication\Create.cshtml" />
+    <Content Include="Views\Medication\Details.cshtml" />
+    <Content Include="Views\Medication\Edit.cshtml" />
+    <Content Include="Views\Medication\Delete.cshtml" />
+    <Content Include="Views\Activity\Create.cshtml" />
+    <Content Include="Views\Activity\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

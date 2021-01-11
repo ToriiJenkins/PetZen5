@@ -16,6 +16,7 @@ namespace PetZen.WebMVC.Controllers
         private ApplicationDbContext _db = new ApplicationDbContext();
 
         // GET: Pet
+        [Authorize]
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
@@ -25,6 +26,7 @@ namespace PetZen.WebMVC.Controllers
         }
 
         //GET: PET/CREATE
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -32,6 +34,7 @@ namespace PetZen.WebMVC.Controllers
         }
 
         //POST: Pet/Create
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(PetCreate model)
@@ -51,6 +54,8 @@ namespace PetZen.WebMVC.Controllers
             return View(model);
         }
 
+        //GET: Pet/Detail
+        [Authorize]
         public ActionResult Details(int id)
         {
             var svc = CreatePetService();
@@ -59,6 +64,8 @@ namespace PetZen.WebMVC.Controllers
             return View(model);
         }
 
+        //GET: Pet/Edit
+        [Authorize]
         public ActionResult Edit(int id)
         {
             var service = CreatePetService();
@@ -78,6 +85,8 @@ namespace PetZen.WebMVC.Controllers
             return View(model);
         }
 
+        //POST: Pet/Edit
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, PetEdit model)
@@ -102,6 +111,8 @@ namespace PetZen.WebMVC.Controllers
             return View(model);
         }
 
+        //GET: Pet/Delete
+        [Authorize]
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -111,6 +122,8 @@ namespace PetZen.WebMVC.Controllers
             return View(model);
         }
 
+        //POST: Pet/Delete
+        [Authorize]
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]

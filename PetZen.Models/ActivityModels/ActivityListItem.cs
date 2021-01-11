@@ -10,10 +10,8 @@ namespace PetZen.Models.ActivityModels
     public class ActivityListItem
     {
         public int ActivityId { get; set; }
-        public Guid OwnerId { get; set; }
+        public string PetName { get; set; }
         public ActivityEnum ActType { get; set; }
-        public int PetId { get; set; }
-        public string Name { get; set; }
         public DateTimeOffset Date {get; set;}
         public string Notes { get; set; }
 

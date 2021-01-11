@@ -21,8 +21,8 @@ namespace PetZen.Data
         [Required]
         public SpeciesEnum Species { get; set; }
 
-        [Required]
-        public double ServingSize { get; set; }
+        //[Required]
+        //public double ServingSize { get; set; }
 
         public string PurchaseLink { get; set; }
     }
