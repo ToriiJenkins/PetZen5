@@ -27,7 +27,14 @@ namespace PetZen.Data
         [Required]
         [ForeignKey(nameof(Food))]
         public int FoodId { get; set; }
-        public virtual Food Food { get; set; }
+        public virtual Food Food { get; set; }  
+
+        public double AmountFed { get; set; }
+
+        public MeasurementEnum Measurement { get; set; }
+
+        [Required]
+        public bool Defalut { get; set; }
 
         public string Notes { get; set; }
     }

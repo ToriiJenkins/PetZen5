@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using PetZen.Data;
+using PetZen.Models;
 using PetZen.Models.ActivityModels;
 using PetZen.Services;
 using System;
@@ -76,13 +77,85 @@ namespace PetZen.WebMVC.Controllers
             var svc = CreateActivityService();
             var model = svc.GetActivityById(id);
 
+            return View(model);
+        }
+
+        //GET: Activity/Edit
+        [Authorize]
+        public ActionResult Edit(int id)
+        {
             ViewData["Pets"] = _db.Pets.Select(p => new SelectListItem
             {
                 Text = p.Name,
                 Value = p.PetId.ToString()
             });
 
+            var service = CreateActivityService();
+            var detail = service.GetActivityById(id);
+            var model =
+                new ActivityEdit
+                {
+                    ActivityId = detail.ActivityId,
+                    ActType = detail.ActType,
+                    PetId = detail.PetId,
+                    Date = detail.Date, 
+                    Notes = detail.Notes
+                };
+
             return View(model);
+        }
+
+        //POST: Activity/Edit
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, ActivityEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.ActivityId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateActivityService();
+
+            if (service.UpdateActivity(model))
+            {
+                TempData["SaveResult"] = "Your activity has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your activity could not be updated.");
+            return View(model);
+        }
+
+        //GET: Activity/Delete
+        [Authorize]
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateActivityService();
+            var model = svc.GetActivityById(id);
+
+            return View(model);
+        }
+
+        //POST: Activity/Delete
+        [Authorize]
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteActivity(int id)
+        {
+            var service = CreateActivityService();
+
+            service.DeleteActivity(id);
+
+            TempData["SaveResult"] = "Your activity has been removed.";
+
+            return RedirectToAction("Index");
         }
 
         private ActivityService CreateActivityService()

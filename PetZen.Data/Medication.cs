@@ -19,13 +19,12 @@ namespace PetZen.Data
         [Required]
         public string Name { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(Pet))]
-        public int PetId { get; set; }
-        public virtual Pet Pet { get; set; }
+        //[Required]
+        //[ForeignKey(nameof(Pet))]
+        //public int PetId { get; set; }
+        //public virtual Pet Pet { get; set; }
 
-        [Required]
-        public double Dosage { get; set; }
+
 
         [Required]
         public int TimesPerDay { get; set; }

@@ -15,10 +15,11 @@ namespace PetZen.Models.ActivityModels
 
         public Guid OwnerId { get; set; }
 
-        public string PetName { get; set; }
-        public ActivityEnum ActType { get; set; }
-
         public int PetId { get; set; }
+
+        public string PetName { get; set; }
+
+        public ActivityEnum ActType { get; set; }
 
        public DateTimeOffset Date { get; set; }
 

@@ -22,7 +22,21 @@ namespace PetZen.Data
         public virtual Pet Pet { get; set; }
 
         [Required]
+        [ForeignKey(nameof(Medication))]
+        public int MedId { get; set; }
+        public virtual Medication Medication { get; set; }
+
+        [Required]
         public DateTimeOffset AdminDateTime { get; set; }
+
+        [Required]
+        public double Dosage { get; set; }
+
+        [Required]
+        public MeasurementEnum DoseMeasure { get; set; }
+
+        [Required]
+        public bool Defalut { get; set; }
 
         public string Notes { get; set; }
     }

@@ -1,4 +1,4 @@
-﻿using PetZen.Data;
+﻿ using PetZen.Data;
 using PetZen.Models.ActivityModels;
 using System;
 using System.Collections.Generic;
@@ -72,11 +72,45 @@ namespace PetZen.Services
                     new ActivityDetail
                     {
                         ActivityId = entity.ActivityId,
+                        PetId = entity.PetId,
                         PetName = entity.Pet.Name,
                         ActType= entity.ActType,
                         Date = entity.Date,
                         Notes = entity.Notes,
                     };
+            }
+        }
+
+        public bool UpdateActivity(ActivityEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Activities
+                        .Single(e => e.ActivityId == model.ActivityId && e.OwnerId == _userId);
+
+                entity.ActType = model.ActType;
+                entity.PetId = model.PetId;
+                entity.Date = model.Date;
+                entity.Notes = model.Notes;             
+                return ctx.SaveChanges() == 1;
+
+            }
+        }
+
+        public bool DeleteActivity(int medId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                        ctx
+                            .Activities
+                            .Single(e => e.ActivityId == medId && e.OwnerId == _userId);
+
+                ctx.Activities.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
 

@@ -30,3 +30,6 @@ C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\D
 C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\Debug\PetZen.Data.csproj.CopyComplete
 C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\Debug\PetZen.Data.dll
 C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\Debug\PetZen.Data.pdb
+C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\Debug\PetZen.Data.Migrations.InitialCreate.resources
+C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\Debug\PetZen.Data.csproj.GenerateResource.cache
+C:\Users\btjen\Desktop\Eleven Fifty\ElevenFiftyProjects\PetZen\PetZen.Data\obj\Debug\PetZen.Data.Migrations.movedDosageToAdministration.resources

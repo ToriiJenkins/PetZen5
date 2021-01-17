@@ -11,8 +11,7 @@ namespace PetZen.Models.MedicationModels
     {
         public int MedId { get; set; }
         public string Name { get; set; }
-
-        public int PetId { get; set; }
+        //public int PetId { get; set; }
         public string PetName { get; set; }
         public double Dosage { get; set; }
         public int TimesPerDay { get; set; }

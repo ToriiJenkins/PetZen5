@@ -77,7 +77,9 @@
   <ItemGroup>
     <Compile Include="ActivityModels\ActivityCreate.cs" />
     <Compile Include="ActivityModels\ActivityDetail.cs" />
+    <Compile Include="ActivityModels\ActivityEdit.cs" />
     <Compile Include="ActivityModels\ActivityListItem.cs" />
+    <Compile Include="FeedingModels\FeedingListItem.cs" />
     <Compile Include="FoodModels\FoodCreate.cs" />
     <Compile Include="FoodModels\FoodDetail.cs" />
     <Compile Include="FoodModels\FoodEdit.cs" />
@@ -104,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdministrationModels\" />
-    <Folder Include="FeedingModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

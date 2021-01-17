@@ -11,16 +11,13 @@ namespace PetZen.Data
         Dog,
         Cat,
         Rabbit,
+        Bird,
         Hamster,
         GineaPig,
-        Ferret,
-        Bird,
+        Ferret,   
         Turtle,
         Reptile,
         Chinchilla,
-        Horse,
-        Pig,
-        Goat,
-        Sheep
+        Horse 
     }
 }

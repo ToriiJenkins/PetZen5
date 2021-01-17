@@ -12,7 +12,6 @@ namespace PetZen.Data
         Run,
         Play,
         Swim,
-        Jump,
-        Fly
+        Roam     
     }
 }

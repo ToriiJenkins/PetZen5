@@ -33,11 +33,11 @@ namespace PetZen.WebMVC.Controllers
         {
             var viewModel = new MedicationCreate();
 
-            viewModel.Pets = _db.Pets.Select(p => new SelectListItem
-            {
-                Text = p.Name,
-                Value = p.PetId.ToString()
-            });
+            //viewModel.Pets = _db.Pets.Select(p => new SelectListItem
+            //{
+            //    Text = p.Name,
+            //    Value = p.PetId.ToString()
+            //});
 
             return View(viewModel);
 
@@ -49,11 +49,11 @@ namespace PetZen.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(MedicationCreate model)
         {
-            ViewData["Pets"] = _db.Pets.Select(p => new SelectListItem
-            {
-                Text = p.Name,
-                Value = p.PetId.ToString()
-            });
+            //ViewData["Pets"] = _db.Pets.Select(p => new SelectListItem
+            //{
+            //    Text = p.Name,
+            //    Value = p.PetId.ToString()
+            //});
 
             if (!ModelState.IsValid) return View(model);
 
@@ -102,7 +102,7 @@ namespace PetZen.WebMVC.Controllers
                 {
                     MedId = detail.MedId,
                     Name = detail.Name,
-                    PetId = detail.PetId,                     Dosage = detail.Dosage,
+                   /* PetId = detail.PetId,  */                /* Dosage = detail.Dosage,*/
                     BeginDate = detail.BeginDate,
                     EndDate = detail.EndDate,
                     TimesPerDay = detail.TimesPerDay,
@@ -129,11 +129,11 @@ namespace PetZen.WebMVC.Controllers
 
             if (service.UpdateMedication(model))
             {
-                TempData["SaveResult"] = "Your food was updated.";
+                TempData["SaveResult"] = "Your medication has been updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your food could not be updated.");
+            ModelState.AddModelError("", "Your medication could not be updated.");
             return View(model);
         }
 

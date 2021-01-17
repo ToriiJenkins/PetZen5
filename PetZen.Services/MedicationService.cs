@@ -25,8 +25,8 @@ namespace PetZen.Services
                 {
                     OwnerId = _userId,
                     Name = model.Name,
-                    PetId = model.PetId,
-                    Dosage = model.Dosage,
+                    //PetId = model.PetId,
+                    //Dosage = model.Dosage,
                     TimesPerDay = model.TimesPerDay,
                     BeginDate = model.BeginDate,
                     EndDate = model.EndDate,
@@ -55,8 +55,8 @@ namespace PetZen.Services
                                 {
                                     MedId = e.MedId,
                                     Name = e.Name,
-                                    PetName = e.Pet.Name,
-                                    Dosage = e.Dosage,
+                                    //PetName = e.Pet.Name,
+                                    //Dosage = e.Dosage,
                                     TimesPerDay = e.TimesPerDay,
                                     BeginDate = e.BeginDate,
                                     EndDate = e.EndDate,
@@ -80,9 +80,9 @@ namespace PetZen.Services
                     {
                         MedId = entity.MedId,
                         Name = entity.Name,
-                        PetId = entity.PetId,
-                        PetName = entity.Pet.Name,
-                        Dosage = entity.Dosage,
+                        //PetId = entity.PetId,
+                        //PetName = entity.Pet.Name,
+                        //Dosage = entity.Dosage,
                         TimesPerDay = entity.TimesPerDay,
                         BeginDate = entity.BeginDate,
                         EndDate = entity.EndDate,
@@ -101,8 +101,8 @@ namespace PetZen.Services
                         .Single(e => e.MedId == model.MedId && e.OwnerId == _userId);
 
                 entity.Name = model.Name;
-                entity.PetId = model.PetId;
-                entity.Dosage = model.Dosage;
+                //entity.PetId = model.PetId;
+                //entity.Dosage = model.Dosage;
                 entity.TimesPerDay = model.TimesPerDay;
                 entity.BeginDate = model.BeginDate;
                 entity.EndDate = model.EndDate;

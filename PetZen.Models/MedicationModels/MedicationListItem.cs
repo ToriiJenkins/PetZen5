@@ -11,8 +11,8 @@ namespace PetZen.Models
         public int MedId { get; set; }
         public Guid OwnerId { get; set; }
         public string Name { get; set; }
-        public string PetName { get; set; }
-        public double Dosage { get; set; }
+        //public string PetName { get; set; }
+        //public double Dosage { get; set; }
         public int TimesPerDay { get; set; }
 
         public DateTime BeginDate { get; set; }

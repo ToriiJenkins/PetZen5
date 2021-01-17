@@ -16,10 +16,10 @@ namespace PetZen.Models.MedicationModels
         [Required]
         public string Name { get; set; }
 
-        //Dropdown for Pets
-        public IEnumerable<SelectListItem> Pets { get; set; }
-        //Selected Pet
-        public int PetId { get; set; }
+        ////Dropdown for Pets
+        //public IEnumerable<SelectListItem> Pets { get; set; }
+        ////Selected Pet
+        //public int PetId { get; set; }
 
         [Required]
         public double Dosage { get; set; }
